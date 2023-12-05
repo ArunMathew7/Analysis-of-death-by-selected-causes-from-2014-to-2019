@@ -21,6 +21,7 @@ class edaAnalysis:
     """
 
     def __init__(self):
+        """ """
         pass
 
     def trend_all_cause():

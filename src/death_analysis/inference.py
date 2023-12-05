@@ -32,6 +32,7 @@ class inferenceAnalysis:
     """
 
     def __init__(self):
+        """ """
         pass
 
     def research_question2():
@@ -163,6 +164,26 @@ class inferenceAnalysis:
         test_score = pipeline.score(X_test, y_test)
         print(f"Model R^2 Score on Test Set: {test_score}")
 
+        return pipeline
+
+    def model_prediction_graph():
+        # Split the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=42
+        )
+
+        pipeline = Pipeline(
+            [
+                ("scaler", StandardScaler()),  # Standardize the features
+                (
+                    "model",
+                    RandomForestRegressor(),
+                ),  # Use a RandomForestRegressor a|s the model
+            ]
+        )
+
+        pipeline.fit(X_train, y_train)
+
         predictions = pipeline.predict(X_test)
 
         # Create a DataFrame with actual and predicted values
@@ -210,8 +231,6 @@ class inferenceAnalysis:
         plt.title("Actual vs Predicted Values using Seaborn")
 
         plt.show()
-
-        return pipeline
 
     def feature_importance():
         """
