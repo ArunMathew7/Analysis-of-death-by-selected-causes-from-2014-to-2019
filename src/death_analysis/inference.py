@@ -29,7 +29,7 @@ X = death_df.drop(["Jurisdiction of Occurrence", "Year", "Month", "All Cause"], 
 y = death_df["All Cause"]
 
 
-class inferenceAnalysis:
+class InferenceAnalysis:
     """
     This class contains the functions to analyse the plots regarding research questions
     and get the conclusions of all the research questions.
@@ -240,7 +240,7 @@ class inferenceAnalysis:
         """
         Visualizes feature importance scores for the prediction model.
         """
-        pipeline = inferenceAnalysis.prediction_model()
+        pipeline = InferenceAnalysis.prediction_model()
         # 'pipeline' is your trained model
         feature_importance = pipeline.named_steps["model"].feature_importances_
 
@@ -262,7 +262,7 @@ class inferenceAnalysis:
         Compares actual vs predicted seasonal mortality rates.
         """
         # 'pipeline' is your trained model
-        pipeline = inferenceAnalysis.prediction_model()
+        pipeline = InferenceAnalysis.prediction_model()
         # Make predictions on the entire dataset
         predicted_mortality = pipeline.predict(X)
 
@@ -324,7 +324,7 @@ class inferenceAnalysis:
         Visualizes feature importance scores for the prediction model using both Matplotlib and Seaborn.
         """
         #'pipeline' is your trained model
-        pipeline = inferenceAnalysis.prediction_model()
+        pipeline = InferenceAnalysis.prediction_model()
 
         feature_importance = pipeline.named_steps["model"].feature_importances_
         features = X.columns
