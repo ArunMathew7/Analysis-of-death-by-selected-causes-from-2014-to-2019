@@ -3,7 +3,7 @@ requires = ["setuptools>=40.6.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "Analysis of death by selected causes from 2014 to 2019"
+name = "Analysis-of-death-by-selected-causes-from-2014-to-2019"
 authors = [{name = "Arun Mathew", email = "amathew5@mail.yu.edu"}]
 version = "0.1.0"
 description = "analysis of monthly death counts from 2014 to 2019"
