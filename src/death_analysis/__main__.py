@@ -25,7 +25,6 @@ def eda():
     EdaAnalysis.external_factors()
     EdaAnalysis.natural_by_month()
     EdaAnalysis.monthly_death_disease()
-    EdaAnalysis.correlation_matrix()
     EdaAnalysis.all_cause_mortality()
     EdaAnalysis.monthly_all_cause_mortality()
     EdaAnalysis.monthly_heart_cause_morality()
